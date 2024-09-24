@@ -21,6 +21,7 @@ nav{
     justify-content: center;
     gap: 8px;
     padding-top: 16px;
+    flex-wrap: wrap;
  }
 
 .color{
