@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Image Color Palette
+{% endblock title %}
+
+
+{% block content %}
+    <nav>
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='assets/img/color_palette_logo.svg') }}" alt="logo" width="250">
+        </a>
+    </nav>
+
+    <section class="form">
+       {{ dropzone.create(action='/') }}
+    </section>
+
+    <section class="result">
+        content
+    </section>
+{% endblock content %}
+
+{% block js %}
+<!--    dropzone-->
+    {{ dropzone.load_js() }}
+    {{ dropzone.config(redirect_url='/', custom_init='dz = this;document.getElementById("upload-btn").addEventListener("click", function handler(e) {dz.processQueue();});',
+                 custom_options='autoProcessQueue: false, addRemoveLinks: true', max_files=1) }}
+{% endblock js %}
