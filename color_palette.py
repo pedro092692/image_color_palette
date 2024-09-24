@@ -12,7 +12,6 @@ class GetColor:
 
         self.remove_files(file=file)
 
-
     @staticmethod
     def remove_files(file):
         os.remove(f'images/{file}')

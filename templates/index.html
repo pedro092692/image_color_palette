@@ -25,5 +25,5 @@
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 <!--    dropzone-->
     {{ dropzone.load_js() }}
-    {{ dropzone.config() }}
+    {{ dropzone.config(custom_options='addRemoveLinks: true') }}
 {% endblock js %}

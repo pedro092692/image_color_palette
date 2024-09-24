@@ -12,7 +12,7 @@ socketio = SocketIO(app)
 # plugins
 dropzone = Dropzone(app)
 app.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
-app.config['DROPZONE_ALLOWED_FILE_TYPE'] = '.jpg, .jpeg, .png, .bmp, .tiff, .webp, .svg'
+app.config['DROPZONE_ALLOWED_FILE_TYPE'] = '.jpg, .jpeg, .png, .bmp, .tiff, .webp'
 app.config['DROPZONE_PREVIEW_WIDTH'] = 256
 app.config['DROPZONE_PREVIEW_HEIGHT'] = 256
 app.config['DROPZONE_MAX_FILE_SIZE'] = 8
@@ -35,7 +35,6 @@ def home():
             socketio.emit('common_colors', {'colors': [colors]})
 
     return render_template('index.html')
-
 
 
 if __name__ == '__main__':

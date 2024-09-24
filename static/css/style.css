@@ -29,6 +29,13 @@ nav{
     border-radius: 8px;
 }
 
+.result .container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
 .dropzone {
   display: flex;
   flex-direction: column;
