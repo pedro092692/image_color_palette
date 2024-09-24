@@ -17,13 +17,15 @@
     </section>
 
     <section class="result">
-        content
+        <div class="color" id="1">
+        </div>
+        <div class="color" id="1">
+        </div>
     </section>
 {% endblock content %}
 
 {% block js %}
 <!--    dropzone-->
     {{ dropzone.load_js() }}
-    {{ dropzone.config(redirect_url='/', custom_init='dz = this;document.getElementById("upload-btn").addEventListener("click", function handler(e) {dz.processQueue();});',
-                 custom_options='autoProcessQueue: false, addRemoveLinks: true', max_files=1) }}
+    {{ dropzone.config() }}
 {% endblock js %}

@@ -3,6 +3,7 @@ body{
     flex-direction: column;
     gap: 8px;
     height: 100vh;
+     font-family: "Roboto", system-ui;
 }
 
 nav{
@@ -11,13 +12,23 @@ nav{
 }
 
 .form{
+    padding: 0 24px;
+}
+
+ .result{
     display: flex;
     flex-grow: 1;
-    flex-direction: column;
-    align-items: center;
-
+    justify-content: center;
+    gap: 8px;
+    padding-top: 16px;
  }
 
+.color{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(222, 251, 251);
+    border-radius: 8px;
+}
 
 .dropzone {
   display: flex;
@@ -27,6 +38,7 @@ nav{
   gap: 8px;
   border: none;
   font-size: 1.5rem;
+  padding: 8px;
   }
 
 .dz-message {
