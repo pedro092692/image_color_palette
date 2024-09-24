@@ -16,15 +16,13 @@
        {{ dropzone.create(action='/') }}
     </section>
 
-    <section class="result">
-        <div class="color" id="1">
-        </div>
-        <div class="color" id="1">
-        </div>
+    <section class="result" id="result">
     </section>
 {% endblock content %}
 
 {% block js %}
+<!--    socketio-->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 <!--    dropzone-->
     {{ dropzone.load_js() }}
     {{ dropzone.config() }}
